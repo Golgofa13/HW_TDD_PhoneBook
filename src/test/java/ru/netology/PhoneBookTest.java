@@ -57,4 +57,16 @@ public class PhoneBookTest {
         // assert
         assertEquals("+79781758443", result);
     }
+
+    @Test
+    void testPrintAllName(){
+        // act
+        int firstAdd = book.add("Roland", "+79781123553");
+        int secondAdd = book.add("Andrey", "+79781758443");
+        int thirdAdd = book.add("Dio", "+79827730397");
+        String result = book.printAllNames(book);
+
+        // assert
+        assertEquals("Andrey, " + "Dio, " + "Roland", result);
+    }
 }

@@ -2,13 +2,14 @@ package ru.netology;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class PhoneBook {
 
     private Map<String,String> contacts;
 
     public PhoneBook(){
-        contacts = new HashMap<>();
+        contacts = new TreeMap<>();
     }
 
     public int add(String name, String number) {
@@ -41,4 +42,9 @@ public class PhoneBook {
         }
         return theDesiredValue;
     }
+
+    public String printAllNames(PhoneBook contactBook){
+
+        return null;
+    };
 }
