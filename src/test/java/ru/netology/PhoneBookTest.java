@@ -38,9 +38,11 @@ public class PhoneBookTest {
     public void testFindByNumber() {
         //act
         int firstAdd = book.add("Roland", "+79781123553");
-        String result = book.findByNumber("+79781123553");
+        int secondAdd = book.add("Andrey", "+79781758443");
+        int thirdAdd = book.add("Dio","+79827730397");
+        String result = book.findByNumber("+79781758443");
 
         //assert
-        assertEquals("Roland", result);
+        assertEquals("Andrey", result);
     }
 }
