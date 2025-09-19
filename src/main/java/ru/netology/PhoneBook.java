@@ -24,12 +24,21 @@ public class PhoneBook {
         for(Map.Entry<String,String> entry : contacts.entrySet()){
             if (entry.getValue().equals(number)){
                 theDesiredKey = entry.getKey();
+                break;
             }
         }
         return theDesiredKey;
     }
 
     public String findByName(String name){
-        return null;
+        String theDesiredValue = null;
+
+        for(Map.Entry<String,String> entry : contacts.entrySet()){
+            if (entry.getKey().equals(name)){
+                theDesiredValue = entry.getValue();
+                break;
+            }
+        }
+        return theDesiredValue;
     }
 }
