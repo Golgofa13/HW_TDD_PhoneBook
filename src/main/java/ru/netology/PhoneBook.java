@@ -43,8 +43,8 @@ public class PhoneBook {
         return theDesiredValue;
     }
 
-    public String printAllNames(PhoneBook contactBook){
+    public String printAllNames(){
 
-        return null;
+        return String.join(", ", contacts.keySet());
     };
 }
