@@ -28,4 +28,8 @@ public class PhoneBook {
         }
         return theDesiredKey;
     }
+
+    public String findByName(String name){
+        return null;
+    }
 }

@@ -36,13 +36,25 @@ public class PhoneBookTest {
 
     @Test
     public void testFindByNumber() {
-        //act
+        // act
         int firstAdd = book.add("Roland", "+79781123553");
         int secondAdd = book.add("Andrey", "+79781758443");
-        int thirdAdd = book.add("Dio","+79827730397");
+        int thirdAdd = book.add("Dio", "+79827730397");
         String result = book.findByNumber("+79781758443");
 
-        //assert
+        // assert
         assertEquals("Andrey", result);
+    }
+
+    @Test
+    void testFindByName() {
+        // act
+        int firstAdd = book.add("Roland", "+79781123553");
+        int secondAdd = book.add("Andrey", "+79781758443");
+        int thirdAdd = book.add("Dio", "+79827730397");
+        String result = book.findByNumber("Andrey");
+
+        // assert
+        assertEquals("+79781758443", result);
     }
 }
